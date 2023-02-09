@@ -1,0 +1,13 @@
+.map-border {
+  border: 5px solid black;
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+}
+
+#lamap {
+  height: 60vh;
+  width: 100%;
+}

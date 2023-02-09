@@ -1,0 +1,24 @@
+<div *ngIf="ville">
+  <h2>Détails pour {{ville.name | uppercase}}</h2>
+  <div><span>id : </span>{{ville.id}}</div>
+  <div>
+    <label for="ville-pays"> Pays : </label>
+    <input id="ville-pays" [(ngModel)]="ville.pays" placeholder="Nom du pays" />
+    <label for="ville-name"> Ville : </label>
+    <input id="ville-name" [(ngModel)]="ville.name" placeholder="Nom de la Ville" />
+    <label for="ville-habit"> Population : </label>
+    <input id="ville-habit" [(ngModel)]="ville.habit" placeholder="Nombre d'habitants" />
+    <label for="ville-habit"> Habitants </label>
+  </div>
+  <div>
+    <label for="ville-latit"> Latitude : </label>
+    <input id="ville-latit" [(ngModel)]="ville.latit" placeholder="La latitude" />
+    <label for="ville-longit"> Longitude : </label>
+    <input id="ville-longit" [(ngModel)]="ville.longit" placeholder="La longitude" />
+    <label for="ville-altit"> Altitude : </label>
+    <input id="ville-altit" [(ngModel)]="ville.altit" placeholder="L'altitude" />
+    <label for="ville-altit"> mètres </label>
+  </div>
+  <button type="button" (click)="goBack()">Retour</button>
+  <button type="button" (click)="save()">Enregitrer</button>
+</div>

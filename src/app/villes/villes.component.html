@@ -1,0 +1,20 @@
+<h2>Les Villes</h2>
+
+<ul class="villes">
+    <li *ngFor="let ville of villes">
+        <a routerLink="/detail/{{ville.id}}">
+            <span class="badge">{{ville.id}}</span> {{ville.name}}
+        </a>
+        <button type="button" class="delete" title="Supprimer la ville" (click)="delete(ville)">X</button>
+    </li>
+</ul>
+
+<div>
+    <label for="new-ville">Ville à ajouter : </label>
+    <input id="new-ville" #villeName />
+
+    <!-- (clic) passe la valeur d'entrée à add() puis efface l'entrée -->
+    <button type="button" class="add-button" (click)="add(villeName.value); villeName.value=''">
+    Ajouter la ville
+  </button>
+</div>
